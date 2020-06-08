@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ekKgu4uQVfsUh+meiEtF8UyvBSbEpgEG9wy7l/zRDPoeNJBmQ/xcLpw5M4RiYG4yw6lSpgkeGIH++T6tFw8xJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yan_1\\Documents\\Rerum\\Projeto Vendas\\ProjetoVendas\\ProjetoVendas\\ProjetoVendas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yan_1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
