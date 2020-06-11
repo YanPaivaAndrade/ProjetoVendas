@@ -1,4 +1,5 @@
-﻿using ProjetoVendas.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoVendas.Data;
 using ProjetoVendas.Models;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace ProjetoVendas.Services
         }
         public Vendedor FindById(int id) 
         {
-            return _context.Vendedore.FirstOrDefault(vendedor => vendedor.Id == id);
+            return _context.Vendedore.Include(vendedor=> vendedor.Departamento).FirstOrDefault(vendedor => vendedor.Id == id);
         }
         public void Insert (Vendedor vendedor)
         {
