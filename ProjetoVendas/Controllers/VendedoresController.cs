@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoVendas.Models;
+using ProjetoVendas.Models.ViewModels;
 using ProjetoVendas.Services;
 
 namespace ProjetoVendas.Controllers
@@ -11,9 +12,11 @@ namespace ProjetoVendas.Controllers
     public class VendedoresController : Controller
     {
         private readonly VendedorService _vendedorService;
-        public VendedoresController(VendedorService vendedorService)
+        private readonly DepartamentoService _departamentoService;
+        public VendedoresController(VendedorService vendedorService, DepartamentoService departamentoService)
         {
             _vendedorService = vendedorService;
+            _departamentoService = departamentoService;
         }
         public IActionResult Index()
         {
@@ -22,7 +25,9 @@ namespace ProjetoVendas.Controllers
         }
         public IActionResult Create()
         {
-            return View();
+            var departamentos = _departamentoService.FindAll();
+            var vendedorViewModel = new VendedorFormViewModel {Departamentos=departamentos };
+            return View(vendedorViewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

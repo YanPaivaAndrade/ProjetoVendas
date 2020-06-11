@@ -12,6 +12,7 @@ namespace ProjetoVendas.Models
         public DateTime DataDeNascimento { get; set; }
         public double Salario { get; set; }
         public Departamento Departamento { get; set; }
+        public int DepartamentoId { get; set; }
         public ICollection<HistoricoDeVendas> Vendas { get; set; } = new List<HistoricoDeVendas>();
 
         public Vendedor()
