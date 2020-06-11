@@ -31,7 +31,7 @@ namespace ProjetoVendas.Data
             Vendedor v2 = new Vendedor("Lucas", "Lucas@gmail.com", new DateTime(1990, 4, 4), 3000.00, d2);
             Vendedor v3 = new Vendedor("Frederico", "Frederico@gmail.com", new DateTime(1991, 3, 4), 4000.00, d3);
             Vendedor v4 = new Vendedor("Lorraine", "Lorraine@gmail.com", new DateTime(1995, 6, 5), 2000.00, d1);
-            Vendedor v5 = new Vendedor("Aline", "Lorraine@gmail.com", new DateTime(1998, 6, 6), 5000.00, d4);
+            Vendedor v5 = new Vendedor("Aline", "Aline@gmail.com", new DateTime(1998, 6, 6), 5000.00, d4);
 
             HistoricoDeVendas hv1 = new HistoricoDeVendas(new DateTime(2020, 3, 3), 1500.00, StatusDeVenda.Vendido, v1);
             HistoricoDeVendas hv2 = new HistoricoDeVendas(new DateTime(2020, 5, 10), 1500.00, StatusDeVenda.Vendido, v4);
