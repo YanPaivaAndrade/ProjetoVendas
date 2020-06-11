@@ -15,6 +15,13 @@ namespace ProjetoVendas.Models
         {
         }
 
+        public HistoricoDeVendas( DateTime data, double valor, StatusDeVenda status, Vendedor vendedor)
+        {
+            Data = data;
+            Valor = valor;
+            Status = status;
+            Vendedor = vendedor;
+        }
         public HistoricoDeVendas(int id, DateTime data, double valor, StatusDeVenda status, Vendedor vendedor)
         {
             Id = id;

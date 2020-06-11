@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Models;
-using ProjetoVendas.Models.Enumerados;
 
 namespace ProjetoVendas.Data
 {

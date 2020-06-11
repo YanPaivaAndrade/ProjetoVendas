@@ -17,7 +17,14 @@ namespace ProjetoVendas.Models
         public Vendedor()
         {
         }
-
+        public Vendedor(string nome, string email, DateTime dataDeNascimento, double salario, Departamento departamento)
+        {
+            this.nome = nome;
+            this.email = email;
+            DataDeNascimento = dataDeNascimento;
+            Salario = salario;
+            Departamento = departamento;
+        }
         public Vendedor(int id, string nome, string email, DateTime dataDeNascimento, double salario, Departamento departamento)
         {
             Id = id;
