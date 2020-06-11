@@ -874,6 +874,30 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "Pomelo.EntityFrameworkCore.Lolita/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.Lolita.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.Lolita.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.Lolita.SqlServer/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Pomelo.EntityFrameworkCore.Lolita": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.Lolita.SqlServer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.Lolita.SqlServer.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -4084,6 +4108,32 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.Lolita/1.1.0": {
+      "sha512": "0AsTmxRG9j3HBtJCM8AHPOUsHrgKTZ12TDS4Ft95KjmugaBx9I0iCN3bdbjUhNa597rLeMqercFzo84IoqrAng==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.lolita/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Pomelo.EntityFrameworkCore.Lolita.dll",
+        "lib/netstandard1.3/Pomelo.EntityFrameworkCore.Lolita.dll",
+        "pomelo.entityframeworkcore.lolita.1.1.0.nupkg.sha512",
+        "pomelo.entityframeworkcore.lolita.nuspec"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.Lolita.SqlServer/1.1.0": {
+      "sha512": "8FZOYiAmYDbc+ppN7D2HVQjhc23L9qP1IRrLeHmQcUcIS1Fly0YCmLpmljmc9+vM1UBsgNjTQpA+OiboJNCvlQ==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.lolita.sqlserver/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Pomelo.EntityFrameworkCore.Lolita.SqlServer.dll",
+        "lib/netstandard1.3/Pomelo.EntityFrameworkCore.Lolita.SqlServer.dll",
+        "pomelo.entityframeworkcore.lolita.sqlserver.1.1.0.nupkg.sha512",
+        "pomelo.entityframeworkcore.lolita.sqlserver.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8585,7 +8635,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.4",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
+      "Pomelo.EntityFrameworkCore.Lolita.SqlServer >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -8647,6 +8698,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.3, )"
+          },
+          "Pomelo.EntityFrameworkCore.Lolita.SqlServer": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           }
         },
         "imports": [

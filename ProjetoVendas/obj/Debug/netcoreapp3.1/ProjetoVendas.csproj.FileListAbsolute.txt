@@ -125,8 +125,6 @@ C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\De
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.csproj.CoreCompileInputs.cache
-C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
@@ -169,3 +167,7 @@ C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\De
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Departamentos\Details.cshtml.g.cs
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Departamentos\Edit.cshtml.g.cs
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Departamentos\Index.cshtml.g.cs
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.Lolita.dll
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.Lolita.SqlServer.dll
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.csproj.CoreCompileInputs.cache
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.MvcApplicationPartsAssemblyInfo.cache
