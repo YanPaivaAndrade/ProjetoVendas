@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +28,7 @@ namespace ProjetoVendas.Controllers
         public IActionResult Create()
         {
             var departamentos = _departamentoService.FindAll();
-            var vendedorViewModel = new VendedorFormViewModel {Departamentos=departamentos };
+            var vendedorViewModel = new VendedorFormViewModel { Departamentos = departamentos };
             return View(vendedorViewModel);
 
         }
@@ -40,47 +41,47 @@ namespace ProjetoVendas.Controllers
         }
         public IActionResult Delete(int? id)
         {
-            if(id == null)
+            if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não fornecido" });
             }
             var vendedor = _vendedorService.FindById(id.Value);
-            if (vendedor == null) 
+            if (vendedor == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não encontrado" });
             }
             return View(vendedor);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete (int id)
+        public IActionResult Delete(int id)
         {
             _vendedorService.Remove(id);
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Details(int? id) 
+        public IActionResult Details(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não fornecido" });
             }
             var vendedor = _vendedorService.FindById(id.Value);
             if (vendedor == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não encontrado" });
             }
             return View(vendedor);
         }
         public IActionResult Edit(int? id)
         {
-            if (id == null) 
+            if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não fornecido" });
             }
             var vendedor = _vendedorService.FindById(id.Value);
-            if(vendedor == null)
+            if (vendedor == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não encontrado" });
             }
             List<Departamento> departamentos = _departamentoService.FindAll();
             VendedorFormViewModel viewModel = new VendedorFormViewModel { Vendedor = vendedor, Departamentos = departamentos };
@@ -90,23 +91,32 @@ namespace ProjetoVendas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Vendedor vendedor)
         {
-            if(id != vendedor.Id)
+            if (id != vendedor.Id)
             {
-                return BadRequest();
+                return RedirectToAction(nameof(Error), new { menssagem = "id não corresponde ao vendedor" });
             }
             try
             {
                 _vendedorService.Update(vendedor);
                 return RedirectToAction(nameof(Index));
             }
-            catch (NotFoundException)
+            catch (NotFoundException e)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { menssagem = e.Message });
             }
-            catch (DbConcurrencyException)
+            catch (DbConcurrencyException e)
             {
-                return BadRequest();
+                return RedirectToAction(nameof(Error), new { menssagem = e.Message});
             }
+        }
+        public IActionResult Error(string menssagem)
+        {
+            var viewModel = new ErrorViewModel
+            {
+                Menssagem = menssagem,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+            return View(viewModel);
         }
     }
 }
