@@ -28,12 +28,33 @@ namespace ProjetoVendas.Controllers
             var departamentos = _departamentoService.FindAll();
             var vendedorViewModel = new VendedorFormViewModel {Departamentos=departamentos };
             return View(vendedorViewModel);
+
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Vendedor vendedor)
         {
             _vendedorService.Insert(vendedor);
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var vendedor = _vendedorService.FindById(id.Value);
+            if (vendedor == null) 
+            {
+                return NotFound();
+            }
+            return View(vendedor);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete (int id)
+        {
+            _vendedorService.Remove(id);
             return RedirectToAction(nameof(Index));
         }
     }

@@ -173,3 +173,4 @@ C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\De
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Index.cshtml.g.cs
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Create.cshtml.g.cs
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Delete.cshtml.g.cs

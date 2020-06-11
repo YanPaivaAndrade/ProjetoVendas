@@ -19,10 +19,21 @@ namespace ProjetoVendas.Services
         {
             return _context.Vendedore.ToList();
         }
+        public Vendedor FindById(int id) 
+        {
+            return _context.Vendedore.FirstOrDefault(vendedor => vendedor.Id == id);
+        }
         public void Insert (Vendedor vendedor)
         {
             _context.Add(vendedor);
             _context.SaveChanges();
         }
+        public void Remove(int id)
+        {
+            var vendedor = _context.Vendedore.Find(id);
+            _context.Vendedore.Remove(vendedor);
+            _context.SaveChanges();
+        }
+
     }
 }
