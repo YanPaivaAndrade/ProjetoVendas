@@ -19,5 +19,10 @@ namespace ProjetoVendas.Services
         {
             return _context.Vendedore.ToList();
         }
+        public void Insert (Vendedor vendedor)
+        {
+            _context.Add(vendedor);
+            _context.SaveChanges();
+        }
     }
 }
