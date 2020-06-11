@@ -171,3 +171,4 @@ C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\De
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.Lolita.SqlServer.dll
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.csproj.CoreCompileInputs.cache
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\ProjetoVendas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Index.cshtml.g.cs
