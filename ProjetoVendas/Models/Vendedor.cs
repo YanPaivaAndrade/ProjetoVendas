@@ -7,8 +7,8 @@ namespace ProjetoVendas.Models
     public class Vendedor
     {
         public int Id { get; set; }
-        public string nome { get; set; }
-        public string email { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
         public DateTime DataDeNascimento { get; set; }
         public double Salario { get; set; }
         public Departamento Departamento { get; set; }
@@ -19,8 +19,8 @@ namespace ProjetoVendas.Models
         }
         public Vendedor(string nome, string email, DateTime dataDeNascimento, double salario, Departamento departamento)
         {
-            this.nome = nome;
-            this.email = email;
+            this.Nome = nome;
+            this.Email = email;
             DataDeNascimento = dataDeNascimento;
             Salario = salario;
             Departamento = departamento;
@@ -28,8 +28,8 @@ namespace ProjetoVendas.Models
         public Vendedor(int id, string nome, string email, DateTime dataDeNascimento, double salario, Departamento departamento)
         {
             Id = id;
-            this.nome = nome;
-            this.email = email;
+            this.Nome = nome;
+            this.Email = email;
             DataDeNascimento = dataDeNascimento;
             Salario = salario;
             Departamento = departamento;

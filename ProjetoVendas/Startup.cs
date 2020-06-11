@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Data;
+using ProjetoVendas.Services;
 
 namespace ProjetoVendas
 {
@@ -30,6 +31,7 @@ namespace ProjetoVendas
             services.AddDbContext<ProjetoVendasContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ProjetoVendasContext")));
             services.AddScoped<BaseDeDados>();
+            services.AddScoped<VendedorService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
