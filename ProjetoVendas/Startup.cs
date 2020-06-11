@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Data;
 using ProjetoVendas.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace ProjetoVendas
 {
@@ -39,6 +41,15 @@ namespace ProjetoVendas
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, BaseDeDados baseDeDados)
         {
+            var ptBr = new CultureInfo("pt-BR");
+            var localizacao = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(ptBr),
+                SupportedCultures = new List<CultureInfo> { ptBr},
+                SupportedUICultures= new List<CultureInfo> { ptBr }
+
+            };
+            app.UseRequestLocalization(localizacao);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
