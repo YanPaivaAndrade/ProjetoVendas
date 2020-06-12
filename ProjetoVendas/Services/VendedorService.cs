@@ -17,35 +17,36 @@ namespace ProjetoVendas.Services
             _context = context;
         }
 
-        public List<Vendedor> FindAll() 
+        public async Task<List<Vendedor>> FindAllAsync() 
         {
-            return _context.Vendedore.ToList();
+            return await _context.Vendedore.ToListAsync();
         }
-        public Vendedor FindById(int id) 
+        public async Task<Vendedor> FindByIdAsync(int id) 
         {
-            return _context.Vendedore.Include(vendedor=> vendedor.Departamento).FirstOrDefault(vendedor => vendedor.Id == id);
+            return await _context.Vendedore.Include(vendedor=> vendedor.Departamento).FirstOrDefaultAsync(vendedor => vendedor.Id == id);
         }
-        public void Insert (Vendedor vendedor)
+        public async Task InsertAsync (Vendedor vendedor)
         {
             _context.Add(vendedor);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
-        public void Remove(int id)
+        public async Task RemoveAsync(int id)
         {
-            var vendedor = _context.Vendedore.Find(id);
+            var vendedor = await _context.Vendedore.FindAsync(id);
             _context.Vendedore.Remove(vendedor);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
-        public void Update(Vendedor vendedor) 
+        public async Task UpdateAsync(Vendedor vendedor) 
         {
-            if (!_context.Vendedore.Any(obj => obj.Id == vendedor.Id))
+            bool validadorDeObj = await _context.Vendedore.AnyAsync(obj => obj.Id == vendedor.Id);
+            if (!validadorDeObj)
             {
                 throw new NotFoundException("Id não encontrado"); 
             }
             try
             {
                 _context.Update(vendedor);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException e)
             {
