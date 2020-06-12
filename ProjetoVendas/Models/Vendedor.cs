@@ -23,7 +23,7 @@ namespace ProjetoVendas.Models
         public double Salario { get; set; }
         public Departamento Departamento { get; set; }
         public int DepartamentoId { get; set; }
-        public ICollection<HistoricoDeVendas> Vendas { get; set; } = new List<HistoricoDeVendas>();
+        public ICollection<HistoricoDeVenda> Vendas { get; set; } = new List<HistoricoDeVenda>();
 
         public Vendedor()
         {
@@ -45,11 +45,11 @@ namespace ProjetoVendas.Models
             Salario = salario;
             Departamento = departamento;
         }
-        public void AddVendas(HistoricoDeVendas hv) 
+        public void AddVendas(HistoricoDeVenda hv) 
         {
             this.Vendas.Add(hv);
         }
-        public void RemoverVendas(HistoricoDeVendas hv)
+        public void RemoverVendas(HistoricoDeVenda hv)
         {
             this.Vendas.Remove(hv);
         }

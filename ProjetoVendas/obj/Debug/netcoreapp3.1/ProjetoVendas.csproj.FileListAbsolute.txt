@@ -176,3 +176,6 @@ C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\De
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Delete.cshtml.g.cs
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Details.cshtml.g.cs
 C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\Vendedores\Edit.cshtml.g.cs
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\HistoricoDeVendas\Index.cshtml.g.cs
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\HistoricoDeVendas\BuscaSimples.cshtml.g.cs
+C:\Users\yan_1\Documents\Rerum\Projeto Vendas\ProjetoVendas\ProjetoVendas\obj\Debug\netcoreapp3.1\Razor\Views\HistoricoDeVendas\BuscaAgrupada.cshtml.g.cs

@@ -3,7 +3,7 @@ using System;
 
 namespace ProjetoVendas.Models
 {
-    public class HistoricoDeVendas
+    public class HistoricoDeVenda
     {
         public int Id { get; set; }
         public DateTime Data { get; set; }
@@ -11,18 +11,18 @@ namespace ProjetoVendas.Models
         public StatusDeVenda Status { get; set; }
         public Vendedor Vendedor { get; set; }
 
-        public HistoricoDeVendas()
+        public HistoricoDeVenda()
         {
         }
 
-        public HistoricoDeVendas( DateTime data, double valor, StatusDeVenda status, Vendedor vendedor)
+        public HistoricoDeVenda( DateTime data, double valor, StatusDeVenda status, Vendedor vendedor)
         {
             Data = data;
             Valor = valor;
             Status = status;
             Vendedor = vendedor;
         }
-        public HistoricoDeVendas(int id, DateTime data, double valor, StatusDeVenda status, Vendedor vendedor)
+        public HistoricoDeVenda(int id, DateTime data, double valor, StatusDeVenda status, Vendedor vendedor)
         {
             Id = id;
             Data = data;
