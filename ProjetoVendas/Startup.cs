@@ -35,6 +35,7 @@ namespace ProjetoVendas
             services.AddScoped<BaseDeDados>();
             services.AddScoped<VendedorService>();
             services.AddScoped<DepartamentoService>();
+            services.AddScoped<HistoricoDeVendaService>();
 
         }
 
