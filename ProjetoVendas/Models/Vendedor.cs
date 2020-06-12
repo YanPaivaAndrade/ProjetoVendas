@@ -8,15 +8,18 @@ namespace ProjetoVendas.Models
     public class Vendedor
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "O preenchimento do {0} é obrigatório.")]
         public string Nome { get; set; }
         [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "O preenchimento do {0} é obrigatório.")]
         public string Email { get; set; }
         [Display(Name = "Data de nascimento")]
-        [DataType (DataType.Date)
+        [DataType(DataType.Date)]
         [DisplayFormat (DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataDeNascimento { get; set; }
         [Display (Name = "Base salarial")]
         [DisplayFormat (DataFormatString = "R$"+"{0:F2}")]
+        [Required(ErrorMessage = "O preenchimento do {0} é obrigatório.")]
         public double Salario { get; set; }
         public Departamento Departamento { get; set; }
         public int DepartamentoId { get; set; }
