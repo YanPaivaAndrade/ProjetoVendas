@@ -38,7 +38,7 @@ namespace ProjetoVendas.Services
                 _context.Vendedore.Remove(vendedor);
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateException e)
+            catch (DbUpdateException)
             {
                 throw new IntegrityException("Não foi possível completar a deleção, pois o vendedor possui vendas registradas");
             }

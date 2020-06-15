@@ -9,6 +9,7 @@ namespace ProjetoVendas.Models
         public DateTime Data { get; set; }
         public double Valor { get; set; }
         public StatusDeVenda Status { get; set; }
+        public int VendedorId { get; set; }
         public Vendedor Vendedor { get; set; }
 
         public HistoricoDeVenda()
